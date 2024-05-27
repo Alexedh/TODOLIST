@@ -1,4 +1,4 @@
-let editIndex = -1;
+let editIndex = -1;//indiquer que l'index n'a pas encore été trouvé ou défini.
 
 // Cette fonction parcourt tous les éléments <li> de la liste des tâches et enregistre
 // leur contenu texte dans un tableau, qui est ensuite sauvegardé dans localStorage.
@@ -94,7 +94,7 @@ function addTask() {
         displayMessage("Task cannot be empty!", "error");
         return;
     }
-
+//Si editIndex est égal à -1, cela signifie que l'index d'une tâche existante n'a pas été trouvé, donc nous devons ajouter une nouvelle tâche.
     if (editIndex === -1) {
         // Add new task
         addTaskToDOM(taskText);
